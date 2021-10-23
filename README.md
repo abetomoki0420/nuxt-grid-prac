@@ -1,29 +1,24 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Grid Layout Demo
 
-We recommend to look at the [documentation](https://v3.nuxtjs.org).
+[Demo](https://gallant-edison-7a136e.netlify.app/)
 
-## Setup
+Grid Layout practice witch [Nuxt3](https://v3.nuxtjs.org/) and [Tailwind CLI](https://tailwindcss.com/docs/installation#using-tailwind-cli)
 
-Make sure to install the dependencies
+## Integrating Tailwind into Nuxt3 with Tailwind CLI
 
-```bash
-yarn install
+Generating `tailwind.css` file to use Tailwind CLI.
+
+```
+npx tailwindcss -o tailwind.css
 ```
 
-## Development
+To use the `tailwind.css`, config [css](https://v3.nuxtjs.org/docs/directory-structure/nuxt.config#css) property in `nuxt.config.ts`.
 
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
 ```
+import { defineNuxtConfig } from "nuxt3"
 
-## Production
+export default defineNuxtConfig({
+  css: ["@/tailwind.css"],
+})
 
-Build the application for production:
-
-```bash
-yarn build
 ```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
